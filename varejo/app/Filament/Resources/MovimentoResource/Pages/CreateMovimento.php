@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\Movimentos\Pages;
+namespace App\Filament\Resources\MovimentoResource\Pages;
 
-use App\Filament\Resources\Movimentos\MovimentoResource;
-use Filament\Notifications\Notification;
+use App\Filament\Resources\MovimentoResource;
 use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
-use App\Models\Produto;
 
 class CreateMovimento extends CreateRecord
 {
@@ -43,3 +41,4 @@ class CreateMovimento extends CreateRecord
         }
     }
 }
+

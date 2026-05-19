@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Filament\Resources\Movimentos\Pages;
+namespace App\Filament\Resources\MovimentoResource\Pages;
 
-use App\Filament\Resources\Movimentos\MovimentoResource;
-use Filament\Actions\DeleteAction;
+use App\Filament\Resources\MovimentoResource;
+use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
 class EditMovimento extends EditRecord
@@ -13,7 +13,7 @@ class EditMovimento extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            DeleteAction::make(),
+            Actions\DeleteAction::make(),
         ];
     }
 }

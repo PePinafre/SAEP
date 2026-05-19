@@ -5,9 +5,7 @@ namespace App\Filament\Resources\Movimentos;
 use App\Filament\Resources\Movimentos\Pages\CreateMovimento;
 use App\Filament\Resources\Movimentos\Pages\EditMovimento;
 use App\Filament\Resources\Movimentos\Pages\ListMovimentos;
-use App\Filament\Resources\Movimentos\Pages\ViewMovimento;
 use App\Filament\Resources\Movimentos\Schemas\MovimentoForm;
-use App\Filament\Resources\Movimentos\Schemas\MovimentoInfolist;
 use App\Filament\Resources\Movimentos\Tables\MovimentosTable;
 use App\Models\Movimento;
 use BackedEnum;
@@ -22,14 +20,11 @@ class MovimentoResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $recordTitleAttribute = 'Movimento';
+
     public static function form(Schema $schema): Schema
     {
         return MovimentoForm::configure($schema);
-    }
-
-    public static function infolist(Schema $schema): Schema
-    {
-        return MovimentoInfolist::configure($schema);
     }
 
     public static function table(Table $table): Table
@@ -49,7 +44,6 @@ class MovimentoResource extends Resource
         return [
             'index' => ListMovimentos::route('/'),
             'create' => CreateMovimento::route('/create'),
-            'view' => ViewMovimento::route('/{record}'),
             'edit' => EditMovimento::route('/{record}/edit'),
         ];
     }
